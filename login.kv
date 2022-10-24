@@ -1,0 +1,65 @@
+MDScreen:
+	name: 'login'
+	id:login
+	MDFloatLayout:
+		md_bg_color : 1, 1, 1, 1
+		MDLabel:
+			text: 'Please Login'
+			font_size:'38sp'
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 226/255, 0, 48/255, 1 
+			pos_hint: {"center_x":0.5, "center_y":0.78}
+			halign: 'center'
+		MDLabel:
+			id:myerror
+			font_size:'12sp'
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 226/255, 0, 48/255, 1 
+			pos_hint: {"center_x":0.5, "center_y":0.2}
+			halign: 'center'
+		MDFloatLayout:
+			pos_hint:{"center_x": .8, "center_y": .38}
+			canvas:
+				Color:
+					rgb:(238/255,238/255,238/255,1)
+				RoundedRectangle:
+					radius:[25]
+
+
+		TextInput:
+			id:loginUsername
+			hint_text:'Enter Your Agent ID No.'
+			font_size:"20sp"
+			size_hint:1,None
+			pos_hint:{"center_x": .5, "center_y": .5}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 96/255,74/255,215/255,1
+			background_color:0,0,0,0
+			halign:"center"
+			padding:15
+		TextInput:
+			id: loginPassword
+			hint_text:'Enter Your Password.'
+			font_size:"20sp"
+			password:True
+			size_hint:1,None
+			pos_hint:{"center_x": .5, "center_y": .4}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 96/255,74/255,215/255,1
+			background_color:0,0,0,0
+			halign:"center"
+			padding:15
+		MDRaisedButton:
+			id: loginButton
+	        icon: "send"
+	        text:"Submit"
+	        pos_hint: {"center_x": .5, "center_y": .3}
+	        size_hint: .7,.01
+	        on_release: app.btn()
+	        

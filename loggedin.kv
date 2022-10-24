@@ -1,0 +1,109 @@
+MDScreen:
+	name: "loggedin"
+	MDFloatLayout:
+		md_bg_color : 226/255, 0, 48/255, 1
+		MDFloatLayout:
+			md_bg_color : 1, 1, 1, 1
+			pos_hint: {"center_x":.5,"center_y":.97}
+			size_hint:1,.19
+			radius: [45]
+
+		MDLabel:
+			text: 'Welcome'
+			font_size:'28sp'
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 226/255, 0, 48/255, 1 
+			pos_hint: {"center_x":0.5, "center_y":0.95}
+			halign: 'center'
+
+		MDLabel:
+			text:'Help Us with your Details.'
+			font_size:'18sp'
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1,1,1,1	
+			pos_hint: {"center_x":0.5, "center_y":0.75}
+			halign: 'center'
+
+		MDTextField:
+			id:ward
+			hint_text:'Enter your stationed ward'
+			font_size:"20sp"
+			size_hint:.8,.14
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1,1,1,1	
+			pos_hint:{"center_x": .5, "center_y": .60}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 1,1,1,1
+			background_color:0,0,0,0
+			halign:"center"
+			
+
+		MDTextField:
+			id:poling
+			hint_text:'Enter your poling Station'
+			font_size:"20sp"
+			size_hint:.8,.14
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1,1,1,1	
+			pos_hint:{"center_x": .5, "center_y": .50}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 1,1,1,1
+			background_color:0,0,0,0
+			halign:"center"
+			
+
+
+		MDTextField:
+			id:presiding
+			hint_text:'Name of Presiding Officer'
+			font_size:"20sp"
+			size_hint:.8,.14
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1,1,1,1	
+			pos_hint:{"center_x": .5, "center_y": .40}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 1,1,1,1
+			background_color:0,0,0,0
+			halign:"center"	
+		MDTextField:
+			id:dpresiding
+			hint_text:'Name of Deputy Presiding Officer'
+			font_size:"20sp"
+			size_hint:.8,.14
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1,1,1,1	
+			pos_hint:{"center_x": .5, "center_y": .30}
+			multiline:False
+			cursor_color: 226/255, 0, 48/255, 1
+			cursor_width:"2sp"
+			foreground_color: 1,1,1,1
+			background_color:0,0,0,0
+			halign:"center"	
+
+		MDLabel:
+			id:myerror
+			font_size:'12sp'
+			theme_text_color:'Custom'
+			font_name: 'Poppins-SemiBold.ttf'
+			text_color: 1, 1, 1, 1 
+			pos_hint: {"center_x":0.5, "center_y":0.2}
+			halign: 'center'
+
+
+		MDRaisedButton:
+	        text:"Next"
+	        pos_hint: {"center_x": .87, "center_y": .1}
+	        size_hint:.2,.01
+	        on_release: app.bbtn()
